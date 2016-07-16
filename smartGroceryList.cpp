@@ -69,31 +69,31 @@ void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& I
  * the length = importance of product
  * random number is generated
  * the interval where the number is located corresponds to the product
-
 */
-
 int IndexOfRndProduct(int arrayOfWeights[], int sizeOfArray){
-int startArray[sizeOfArray];
-int endArray[sizeOfArray];
 
-startArray[0] = 0;
-endArray[0] = arrayOfWeights[0];
+	int startArray[sizeOfArray];
+	int endArray[sizeOfArray];
 
-for(int i=1; i < sizeOfArray; i++){ //generating the intervals
-	startArray[i] = endArray[i-1];
-	endArray[i] = startArray[i]+arrayOfWeights[i];
+	startArray[0] = 0;
+	endArray[0] = arrayOfWeights[0];
+
+	for(int i=1; i < sizeOfArray; i++){ //generating the intervals
+		startArray[i] = endArray[i-1];
+		endArray[i] = startArray[i]+arrayOfWeights[i];
+	}
+
+	int randomNumber0_99 = rand() % 100000;
+
+	// searching the interval where the rnd number is located
+	int j=0;
+	while ((randomNumber0_99 > startArray[j]) && (j<sizeOfArray)) {j++;}
+	j = j-1;
+
+	int index4rnd = j;
+	return index4rnd;
 }
 
-int randomNumber0_99 = rand() % 100000;
-
-// searching the interval where the rnd number is located
-int j=0;
-while ((randomNumber0_99 > startArray[j]) && (j<sizeOfArray)) {j++;}
-j = j-1;
-
-int index4rnd = j;
-return index4rnd;
-}
 
 void output4user(int actualN_OfProducts, string Products[], int productImportance[], int indexOfProduct1, int indexOfProduct2){
 
