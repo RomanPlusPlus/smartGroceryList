@@ -13,6 +13,6 @@ A console program to help you buy healthy products
  * (cholesterol reductors and chocholate).
  * The list contains 3 products for every necessary thing.
  * From these 3 products one has a higher priority, and 2 others - lower priority
- * (the product with the highest nutritional value + 2 a bit lower value for diversity)
+ * (the product with the highest nutritional value + 2 products with a bit lower value - for diversity)
 * you can edit lists of products and priorities by editing corresponding txt files.
 */
