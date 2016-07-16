@@ -36,7 +36,6 @@ void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& I
 		while ( getline (myfile,line) ){
 			arrProducts[k] = line;
 		    	k++;		    
-			
 		}
 		myfile.close();
 	} else cout << "ERROR. Unable to open file products.txt";
