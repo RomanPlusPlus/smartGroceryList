@@ -23,58 +23,41 @@
 #include <fstream>
 #include <cstdlib>
 #include <sstream>
-
 using namespace std;
 
 
+void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& ItemsNumber){
 
-	void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& ItemsNumber){
+	string line;
+	int k=0;
+	
+	ifstream myfile ("products.txt");
+	if (myfile.is_open()){
+		while ( getline (myfile,line) ){
+			arrProducts[k] = line;
+		    	k++;		    
+			
+		}
+		myfile.close();
+	} else cout << "ERROR. Unable to open file products.txt";
 
-		string line;
-		int k=0;
-		  ifstream myfile ("products.txt");
-		  if (myfile.is_open())
-		  {
-		    while ( getline (myfile,line) )
-		    {
+	ItemsNumber=k;
 
-		    	arrProducts[k] = line;
-		    	k++;
+	int summ=0;
 
-		      //cout << line << '\n';
-		    }
-		    myfile.close();
-		  }
-
-		  else cout << "ERROR. Unable to open file products.txt";
-
-		  ItemsNumber=k;
-
-		  	  	  int summ=0;
-
-		  		  ifstream myfile2 ("importance.txt");
-		  		  if (myfile2.is_open())
-		  		  {
-		  		    for (int i=0; i<k; i++)
-		  		    {
-		  		    	 getline (myfile2,line);
-		  		    	istringstream convert(line);
-		  		     	if ( !(convert >> arrImportance[i]) )
-		  		     		arrImportance[i] = 0;
-
-		  		     	summ+=arrImportance[i];
-
-		  		    }
-		  		    myfile2.close();
-		  		  }
-
-		  		  else cout << "ERROR. Unable to open file importance.txt" << endl;
-
-		  		  if (summ!=100000) {cout << "ERROR. The summ of importances is not 100 000" << endl;}
-
-
-
-	};
+	ifstream myfile2 ("importance.txt");
+	if (myfile2.is_open()) {
+		for (int i=0; i<k; i++) {
+			getline (myfile2,line);
+		  	istringstream convert(line);
+		  	if ( !(convert >> arrImportance[i]) ) arrImportance[i] = 0;
+		  	summ+=arrImportance[i];
+		}
+		myfile2.close();
+	} else cout << "ERROR. Unable to open file importance.txt" << endl;
+	
+	if (summ!=100000) {cout << "ERROR. The summ of importances is not 100 000" << endl;}
+};
 
 
 /* generates the index of a random product.
@@ -91,50 +74,29 @@ using namespace std;
 */
 
 int IndexOfRndProduct(int arrayOfWeights[], int sizeOfArray){
+int startArray[sizeOfArray];
+int endArray[sizeOfArray];
 
+startArray[0] = 0;
+endArray[0] = arrayOfWeights[0];
 
-	int startArray[sizeOfArray];
-	int endArray[sizeOfArray];
+for(int i=1; i < sizeOfArray; i++){ //generating the intervals
+	startArray[i] = endArray[i-1];
+	endArray[i] = startArray[i]+arrayOfWeights[i];
+}
 
-	startArray[0] = 0;
-	endArray[0] = arrayOfWeights[0];
+int randomNumber0_99 = rand() % 100000;
 
-	//cout << startArray[0] << " " << endArray[0] << endl;
+// searching the interval where the rnd number is located
+int j=0;
+while ((randomNumber0_99 > startArray[j]) && (j<sizeOfArray)) {j++;}
+j = j-1;
 
-	for(int i=1; i < sizeOfArray; i++){ //generating the intervals
-		startArray[i] = endArray[i-1];
-		endArray[i] = startArray[i]+arrayOfWeights[i];
-
-		//cout << startArray[i] << " " << endArray[i] << endl;
-	}
-
-
-
-
-	  int randomNumber0_99 = rand() % 100000;
-
-	  //cout << "rnd " << randomNumber0_99 << endl;
-
-	  // searching the interval where the rnd number is located
-	  int j=0;
-	  while ((randomNumber0_99 > startArray[j]) && (j<sizeOfArray)){
-		  j++;
-	  }
-	  j = j-1;
-
-
-	 // cout << "j " << j << endl;
-	  int index4rnd = j;
-
-
-
-	return index4rnd;
-
+int index4rnd = j;
+return index4rnd;
 }
 
 void output4user(int actualN_OfProducts, string Products[], int productImportance[], int indexOfProduct1, int indexOfProduct2){
-
-	//cout << actualN_OfProducts  << endl;
 
 	cout << "EVERYDAY PRODUCTS:"  << endl;
 	for (int m=0;m<actualN_OfProducts;m++){
@@ -144,9 +106,6 @@ void output4user(int actualN_OfProducts, string Products[], int productImportanc
 	cout << "---------"  << endl;
 	cout << "SPECIAL PRODUCTS FOR TODAY:"  << endl;
 	cout << Products[indexOfProduct1]  << ", " << Products[indexOfProduct2] << endl;
-
-
-
 }
 
 
@@ -154,28 +113,22 @@ int main() {
 
 	srand (time(NULL));
 
-
 	const int maxOfProducts = 1000; //theoretical max number of products
 
-
 	string Products[maxOfProducts];
-
 	int productImportance[maxOfProducts];
 	int actualN_OfProducts;
 
 	readingBase(Products, productImportance, actualN_OfProducts);
 
+	int indexOfProduct1 = IndexOfRndProduct(productImportance, actualN_OfProducts);
+	int indexOfProduct2 = 0;
 
-int indexOfProduct1 = IndexOfRndProduct(productImportance, actualN_OfProducts);
-int indexOfProduct2 = 0;
+	do { //two products must be different
+		indexOfProduct2 = IndexOfRndProduct(productImportance, actualN_OfProducts);
+	} while (indexOfProduct1==indexOfProduct2);
 
-do { //two products must be different
-	indexOfProduct2 = IndexOfRndProduct(productImportance, actualN_OfProducts);
-} while (indexOfProduct1==indexOfProduct2);
-
-
-output4user(actualN_OfProducts, Products, productImportance, indexOfProduct1, indexOfProduct2);
-
+	output4user(actualN_OfProducts, Products, productImportance, indexOfProduct1, indexOfProduct2);
 
 	return 0;
 }
