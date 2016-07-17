@@ -30,12 +30,12 @@ void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& I
 
 	string line;
 	int k=0;
-	
+
 	ifstream myfile ("products.txt");
 	if (myfile.is_open()){
 		while ( getline (myfile,line) ){
 			arrProducts[k] = line;
-		    	k++;		    
+		    	k++;
 		}
 		myfile.close();
 	} else cout << "ERROR. Unable to open file products.txt";
@@ -54,7 +54,7 @@ void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& I
 		}
 		myfile2.close();
 	} else cout << "ERROR. Unable to open file importance.txt" << endl;
-	
+
 	if (summ!=100000) {cout << "ERROR. The summ of importances is not 100 000" << endl;}
 };
 
@@ -107,6 +107,45 @@ void output4user(int actualN_OfProducts, string Products[], int productImportanc
 	cout << Products[indexOfProduct1]  << ", " << Products[indexOfProduct2] << endl;
 }
 
+bool AreTwoProductsSimillar (int indexOfProduct1, int indexOfProduct2, string Products[]){
+
+	string nameOfProduct1 = Products[indexOfProduct1].substr(0, Products[indexOfProduct1].find("(",0));
+	string nameOfProduct2 = Products[indexOfProduct2].substr(0, Products[indexOfProduct2].find("(",0));
+
+	string typeOfProduct1 = Products[indexOfProduct1].substr(Products[indexOfProduct1].find("(",0),100);
+	string typeOfProduct2 = Products[indexOfProduct2].substr(Products[indexOfProduct2].find("(",0),100);
+
+	bool areIndexIdentical = true;
+	bool areNameIdentical = true;
+	bool areTypeIdentical = true;
+
+	if (indexOfProduct1==indexOfProduct2) {
+		areIndexIdentical = true;
+		} 	else areIndexIdentical = false;
+
+	if (nameOfProduct1==nameOfProduct2) {
+		areNameIdentical = true;
+		} 	else areNameIdentical = false;
+
+	if (typeOfProduct1==typeOfProduct2) {
+		areTypeIdentical = true;
+		} 	else areTypeIdentical = false;
+
+/*
+		cout << nameOfProduct1 << endl;
+		cout << nameOfProduct2 << endl;
+
+		cout << typeOfProduct1 << endl;
+		cout << typeOfProduct2 << endl;
+
+		cout << "---------------" << endl;
+*/
+
+
+	if (areIndexIdentical || areNameIdentical || areTypeIdentical) {
+		return true;
+	} 	else return false;
+}
 
 int main() {
 
@@ -125,7 +164,7 @@ int main() {
 
 	do { //two products must be different
 		indexOfProduct2 = IndexOfRndProduct(productImportance, actualN_OfProducts);
-	} while (indexOfProduct1==indexOfProduct2);
+	} while (AreTwoProductsSimillar(indexOfProduct1, indexOfProduct2, Products));
 
 	output4user(actualN_OfProducts, Products, productImportance, indexOfProduct1, indexOfProduct2);
 
