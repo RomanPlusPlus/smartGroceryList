@@ -1,5 +1,0 @@
-rewrite the "two products must be different" part to make the two products always different (for cases like Salmon (Vitamin B) + Salmon (Vitamin C) )
-
-clean up code
-
-replace arrays with vectors
