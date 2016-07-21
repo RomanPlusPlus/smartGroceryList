@@ -23,6 +23,9 @@
 #include <fstream>
 #include <cstdlib>
 #include <sstream>
+
+#include <sgl/product.hh>
+
 using namespace std;
 
 
@@ -149,7 +152,10 @@ bool AreTwoProductsSimillar (int indexOfProduct1, int indexOfProduct2, string Pr
 }
 
 int main() {
-
+   sgl::product p1("Sweet Potato (Vitamin A)", 12);
+   sgl::product p2("Sweet Potato (Vitamin B6)", 13);
+   std::cout << p1.is_similar_to(p2) << std::endl;
+   
 	srand (time(NULL));
 
 	const int maxOfProducts = 1000; //theoretical max number of products
@@ -169,5 +175,4 @@ int main() {
 
 	output4user(actualN_OfProducts, Products, productImportance, indexOfProduct1, indexOfProduct2);
 
-	return 0;
-}
+	return 0; }

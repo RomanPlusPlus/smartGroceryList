@@ -1,99 +1,99 @@
-Sweet Potato (Vitamin A), 1518
-Spinach (Vitamin A)
-Kale (Vitamin A)
-Papaya (Vitamin C)
-Broccoli (Vitamin C)
-Pineapple (Vitamin C)
-Sardines (Vitamin D)
-Tuna (Vitamin D)
-Cow's milk (Vitamin D)
-Sunflower Seeds (Vitamin E)
-Almonds (Vitamin E)
-Spinach (Vitamin E)
-Kale (Vitamin K)
-Spinach (Vitamin K)
-Broccoli (Vitamin K)
-Sunflower Seeds (Thiamin)
-Black Beans (Thiamin)
-Barley (Thiamin)
-Soybeans (Riboflavin)
-Spinach (Riboflavin)
-Yogurt (Riboflavin)
-Tuna (Niacin)
-Lamb (Niacin)
-Sardines (Niacin)
-Tuna (Vitamin B6)
-Sweet Potato (Vitamin B6)
-Sunflower Seeds (Vitamin B6)
-Lentils (Folate)
-Asparagus (Folate)
-Spinach (Folate)
-Sardines (Vitamin B12)
-Tuna (Vitamin B12)
-Cod (Vitamin B12)
-Almonds (Biotin)
-Sweet Potato (Biotin)
-Oats (Biotin)
-Avocado (Pantothenic acid)
-Sweet Potato (Pantothenic acid)
-Lentils (Pantothenic acid)
-milk (Phosphorus)
-meat (Phosphorus)
-soya (Phosphorus)
-Sea Vegetables (Iodine)
-Cod (Iodine)
-Yogurt (Iodine)
-Pumpkin Seeds (Magnesium)
-Spinach (Magnesium)
-Soybeans (Magnesium)
-Beef (Zinc)
-Lamb (Zinc)
-Pumpkin Seeds (Zinc)
-Tuna (Selenium)
-Sardines (Selenium)
-Cod (Selenium)
-Soybeans (Copper)
-Sunflower Seeds (Copper)
-Lentils (Copper)
-Oats (Manganese)
-Brown Rice (Manganese)
-Spinach (Manganese)
-Broccoli (Chromium)
-Barley (Chromium)
-Oats (Chromium)
-Lentils (Molybdenum)
-Peas (Molybdenum)
-Soybeans (Molybdenum)
-Sweet Potato (Potassium)
-Potatoes (Potassium)
-Soybeans (Potassium)
-Tofu (Calcium)
-Sardines (Calcium)
-Yogurt (Calcium)
-Soybeans (Iron)
-Lentils (Iron)
-Spinach (Iron)
-Peas (Dietary Fiber)
-Lentils (Dietary Fiber)
-Black Beans (Dietary Fiber)
-Tuna (Protein)
-Soybeans (Protein)
-Beef (Protein)
-Beef (indispensable amino acids)
-lentils (indispensable amino acids)
-Peanuts (indispensable amino acids)
-Flaxseeds (alpha-linolenic acid)
-Walnuts (alpha-linolenic acid)
-Soybeans (alpha-linolenic acid)
-Peanuts (linoleic acid)
-Chicken (linoleic acid)
-Olive oil (linoleic acid)
-Peanuts (phytosterols)
-Almonds (phytosterols)
-Rye bread (phytosterols)
-Chocolate (because it's fucking chocolate!)
-Chocolate (because it's fucking chocolate!)
-Chocolate (because it's fucking chocolate!)
-Vollkorn Hafer (reduces LDL cholesterol)
-Vollkorn Hafer (reduces LDL cholesterol)
-Vollkorn Hafer (reduces LDL cholesterol)
+Sweet Potato (Vitamin A),1515
+Spinach (Vitamin A),758
+Kale (Vitamin A),758
+Papaya (Vitamin C),1515
+Broccoli (Vitamin C),758
+Pineapple (Vitamin C),758
+Sardines (Vitamin D),1515
+Tuna (Vitamin D),758
+Cow's milk (Vitamin D),758
+Sunflower Seeds (Vitamin E),1515
+Almonds (Vitamin E),758
+Spinach (Vitamin E),758
+Kale (Vitamin K),1515
+Spinach (Vitamin K),758
+Broccoli (Vitamin K),758
+Sunflower Seeds (Thiamin),1515
+Black Beans (Thiamin),758
+Barley (Thiamin),758
+Soybeans (Riboflavin),1515
+Spinach (Riboflavin),758
+Yogurt (Riboflavin),758
+Tuna (Niacin),1515
+Lamb (Niacin),758
+Sardines (Niacin),758
+Tuna (Vitamin B6),1515
+Sweet Potato (Vitamin B6),758
+Sunflower Seeds (Vitamin B6),758
+Lentils (Folate),1515
+Asparagus (Folate),758
+Spinach (Folate),758
+Sardines (Vitamin B12),1515
+Tuna (Vitamin B12),758
+Cod (Vitamin B12),758
+Almonds (Biotin),1515
+Sweet Potato (Biotin),758
+Oats (Biotin),758
+Avocado (Pantothenic acid),1515
+Sweet Potato (Pantothenic acid),758
+Lentils (Pantothenic acid),758
+milk (Phosphorus),1515
+meat (Phosphorus),758
+soya (Phosphorus),758
+Sea Vegetables (Iodine),1515
+Cod (Iodine),758
+Yogurt (Iodine),758
+Pumpkin Seeds (Magnesium),1515
+Spinach (Magnesium),758
+Soybeans (Magnesium),758
+Beef (Zinc),1515
+Lamb (Zinc),758
+Pumpkin Seeds (Zinc),758
+Tuna (Selenium),1515
+Sardines (Selenium),758
+Cod (Selenium),758
+Soybeans (Copper),1515
+Sunflower Seeds (Copper),758
+Lentils (Copper),758
+Oats (Manganese),1515
+Brown Rice (Manganese),758
+Spinach (Manganese),758
+Broccoli (Chromium),1515
+Barley (Chromium),758
+Oats (Chromium),758
+Lentils (Molybdenum),1515
+Peas (Molybdenum),758
+Soybeans (Molybdenum),758
+Sweet Potato (Potassium),1515
+Potatoes (Potassium),758
+Soybeans (Potassium),758
+Tofu (Calcium),1515
+Sardines (Calcium),758
+Yogurt (Calcium),758
+Soybeans (Iron),1515
+Lentils (Iron),758
+Spinach (Iron),758
+Peas (Dietary Fiber),1515
+Lentils (Dietary Fiber),758
+Black Beans (Dietary Fiber),758
+Tuna (Protein),1515
+Soybeans (Protein),758
+Beef (Protein),758
+Beef (indispensable amino acids),1515
+lentils (indispensable amino acids),758
+Peanuts (indispensable amino acids),758
+Flaxseeds (alpha-linolenic acid),1515
+Walnuts (alpha-linolenic acid),758
+Soybeans (alpha-linolenic acid),758
+Peanuts (linoleic acid),1515
+Chicken (linoleic acid),758
+Olive oil (linoleic acid),758
+Peanuts (phytosterols),1515
+Almonds (phytosterols),758
+Rye bread (phytosterols),758
+Chocolate (because it's fucking chocolate!),1515
+Chocolate (because it's fucking chocolate!),758
+Chocolate (because it's fucking chocolate!),758
+Vollkorn Hafer (reduces LDL cholesterol),1515
+Vollkorn Hafer (reduces LDL cholesterol),758
+Vollkorn Hafer (reduces LDL cholesterol),735
