@@ -1,4 +1,4 @@
-# smartGroceryList
+# Smart grocery list
 A console program to help you buy healthy products
 
 * There are two types of products:

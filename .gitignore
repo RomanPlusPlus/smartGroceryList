@@ -1,0 +1,24 @@
+/build
+/build/*
+
+/_builds
+/_builds/*
+
+/_logs
+/_logs/*
+
+/.kdev4
+/.kdev4/*
+
+*.kdev4
+
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+# temporary
+.netrwhist
+*~
+
+# Python compiled
+*.pyc

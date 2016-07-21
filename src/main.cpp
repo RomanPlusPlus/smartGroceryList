@@ -33,6 +33,7 @@ void readingBase(string (&arrProducts)[1000], int (&arrImportance)[1000], int& I
 
 	ifstream myfile ("products.txt");
 	if (myfile.is_open()){
+      std::cout << "Line: " << line << std::endl;
 		while ( getline (myfile,line) ){
 			arrProducts[k] = line;
 		    	k++;
