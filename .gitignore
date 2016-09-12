@@ -1,8 +1,11 @@
 /build
 /build/*
-
+/_build
+/_build/*
 /_builds
 /_builds/*
+/_install
+/_install/*
 
 /_logs
 /_logs/*
