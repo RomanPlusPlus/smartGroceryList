@@ -7,7 +7,7 @@ list(APPEND LIB_SOURCES
    "${CMAKE_CURRENT_LIST_DIR}/lib/product.cc"
    "${CMAKE_CURRENT_LIST_DIR}/lib/grocery_list.cc"
 )
-add_library(GroceryList STATIC ${LIB_SOURCES})
+add_library(GroceryList ${LIB_SOURCES})
 
 install(TARGETS GroceryList DESTINATION lib)
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/sgl DESTINATION include)
