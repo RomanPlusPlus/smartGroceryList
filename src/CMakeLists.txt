@@ -8,6 +8,7 @@ list(APPEND LIB_SOURCES
    "${CMAKE_CURRENT_LIST_DIR}/lib/grocery_list.cc"
 )
 add_library(GroceryList ${LIB_SOURCES})
+target_include_directories(GroceryList PUBLIC "${CMAKE_CURRENT_LIST_DIR}/../include")
 
 install(TARGETS GroceryList DESTINATION lib)
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/sgl DESTINATION include)
@@ -21,7 +22,7 @@ if(BUILD_CONSOLE_APP)
    add_executable(sgl ${CONSOLE_BIN_SOURCES})
    target_link_libraries(sgl GroceryList)
 
-   set(products_file "${CMAKE_SOURCE_DIR}/products/products.txt")
+   set(products_file "${CMAKE_CURRENT_LIST_DIR}/../products/products.txt")
    file(COPY ${products_file} DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/")
 
    install(TARGETS sgl DESTINATION bin)
